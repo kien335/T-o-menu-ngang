@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#menu {
+    height: 40px;
+    padding: 0;
+    border: 1px solid #333;
+    background-color: black;
+}
+
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Các mục menu cha nằm ngang */
+#menu > ul > li {
+    float: left;
+}
+
+#menu li {
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+#menu a:hover {
+    background-color: red;
+}
+
+/* Menu con nằm ngay dưới mục cha và ẩn mặc định */
+#menu ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    z-index: 10;
+}
+
+/* Hiện menu con khi di chuột vào mục cha */
+#menu li:hover > ul {
+    visibility: visible;
+}
